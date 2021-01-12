@@ -31,7 +31,7 @@
           <v-date-picker
               v-model="selectedDate"
               @input="menu2 = false"
-              :max="selectedDate"
+              :max="maxDate"
           ></v-date-picker>
         </v-menu>
       </v-col>
@@ -88,6 +88,7 @@ export default {
     return {
       reports: null,
       selectedDate: new Date().toISOString().substr(0, 10),
+      maxDate: new Date().toISOString().substr(0, 10),
       menu2: false,
       stepForCrontab: 5
     }
